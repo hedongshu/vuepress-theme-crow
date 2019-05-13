@@ -65,14 +65,11 @@ hr {
   height: 2px;
 }
 
-
-// 页面加载出来动画
-@keyframes closeSlide 
+@keyframes shaowMain
  0%
-    width 300px
+    opacity: 0
  100%
-    width 0px
-
+    opacity: 1
 
 // 内容宽度
 .container {
@@ -83,6 +80,7 @@ hr {
 .header-inner {
   margin: 0 auto;
   width: 700px;
+
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -90,8 +88,11 @@ hr {
   }
 }
 .main-inner {
+  opacity :0
   margin: 80px auto 0;
   width: 700px;
+  animation: shaowMain 1s forwards
+  animation-delay: 1s
 }
 @media (min-width: 1600px) {
   .container .main-inner {
