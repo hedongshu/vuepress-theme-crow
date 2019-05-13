@@ -1,0 +1,98 @@
+@require "./palette.styl"
+
+.header 
+    background: $themeColor;
+
+.header-inner
+    padding: 25px 0 20px
+    margin: 0 auto
+    width: 700px
+
+.clear:after
+    content: ""
+    display: block
+    clear both
+
+
+
+@keyframes toRight 
+ 0%
+    transform: translateX(0%)
+ 100%
+    transform: translateX(100%)
+@keyframes toLeft
+ 0%
+    transform: translateX(0%)
+ 100%
+    transform: translateX(-100%)
+@keyframes headerShow
+ 0% 
+     top: -50px;
+ 100%
+     top: 0px;
+     opacity :1
+
+.header-title
+    float left
+    color #222222
+    overflow hidden
+    .site-title
+        position relative
+        opacity: 0
+        font-size: 22px;
+        font-weight: bolder
+        animation: headerShow 0.5s ease forwards
+        animation-delay: 0.7s
+    .logo-line-before, .logo-line-after
+        display: block;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 75%;
+    .logo-line-before i, .logo-line-after i
+        position: relative;
+        display: block;
+        height: 2px;
+        background: #222;
+    .logo-line-before i
+        left -100%
+        animation: toRight 1s ease forwards
+    .logo-line-after i
+        right -100%
+        animation: toLeft 1s ease forwards
+
+.header-nav
+    float: right
+    margin-top 8px
+    overflow hidden
+    .theNav 
+        position relative
+        opacity 0
+        animation headerShow 0.5s ease 1s forwards
+.nav-toggle 
+    display none
+    position: static;
+    float: right;
+    button
+        margin-top: 2px;
+        padding: 9px 10px;
+        background: transparent;
+        border: none;
+        span
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #555;
+            border-radius: 1px;
+
+.btn-bar+.btn-bar 
+    margin-top: 4px;
+
+.btn:hover,
+.post-button .btn:hover {
+  border-color: #222;
+  color: #222;
+  background: #fff;
+}
+
+
+
