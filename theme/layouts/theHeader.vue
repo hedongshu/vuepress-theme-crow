@@ -29,15 +29,12 @@
 	</header>
 </template>
 <script>
-import theNav from "../components/theNav";
+// import theNav from "../components/theNav";
 export default {
 	data() {
 		return {
 			title: "this is header"
 		};
-	},
-	components: {
-		theNav
 	}
 };
 </script>

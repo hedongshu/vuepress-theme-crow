@@ -1,5 +1,5 @@
 <template>
-
+	<posts :items='pages' />
 </template>
 
 <script>
@@ -8,9 +8,13 @@ export default {
 	data() {
 		return {};
 	},
-	created() {
-		console.log(this.$pagination);
+	computed: {
+		pages() {
+			return this.$pagination._posts;
+		}
 	}
 };
 </script>
+
+
 

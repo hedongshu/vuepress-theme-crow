@@ -14,13 +14,9 @@
 </template>
 
 <script>
-import iconFont from "../components/iconFont";
 export default {
 	data() {
 		return {};
-	},
-	components: {
-		iconFont
 	}
 };
 </script>

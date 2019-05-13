@@ -1,0 +1,55 @@
+.post-block
+    margin: 50px auto 0px
+.post-title
+    position relative
+    font-size: 26px
+    font-weight: 400
+    margin-bottom: 0
+    
+.post-title-link
+    display: inline-block;
+    position: relative;
+    color: #555;
+    border-bottom: none;
+    line-height: 1.2;
+.post-title-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.post-title-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.updateInfo
+    display: inline-block
+    font-size: 14px
+
+.post-excerpt
+    font-size: 15px
+    text-align: justify;
+.post-btn
+    display: inline
+    color: #555;
+    font-size: 14px;
+    background: transparent;
+    border-radius: 0;
+    line-height: 2;
+    border: none;
+    border-bottom: 2px solid #666;
+    transition-property: border;
+.post-btn:hover {
+    border-color: #222;
+    color: #222;
+    background: #fff;
+}
