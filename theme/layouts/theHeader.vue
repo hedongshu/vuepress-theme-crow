@@ -35,7 +35,8 @@ export default {
 		return {
 			title: "this is header"
 		};
-	}
+	},
+	components: {}
 };
 </script>
 

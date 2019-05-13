@@ -9,14 +9,21 @@
 					<icon-font icon-class="geren" />{{ item.text }}
 				</router-link>
 			</li>
+
+			<SearchBox />
 		</ul>
 	</div>
 </template>
 
 <script>
+import SearchBox from "@SearchBox";
+
 export default {
 	data() {
 		return {};
+	},
+	components: {
+		SearchBox
 	}
 };
 </script>

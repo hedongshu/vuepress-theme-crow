@@ -1,3 +1,5 @@
+@require "./palette.styl"
+
 .post-block
     margin: 50px auto 0px
 .post-title
@@ -9,7 +11,7 @@
 .post-title-link
     display: inline-block;
     position: relative;
-    color: #555;
+    color: $textColor;
     border-bottom: none;
     line-height: 1.2;
 .post-title-link::before {
@@ -19,7 +21,7 @@
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #000;
+  background-color: $lightColor
   visibility: hidden;
   transform: scaleX(0);
   transition-duration: 0.2s;
@@ -49,7 +51,7 @@
     border-bottom: 2px solid #666;
     transition-property: border;
 .post-btn:hover {
-    border-color: #222;
-    color: #222;
+    border-color: $lightColor;
+    color: $lightColor;
     background: #fff;
 }
