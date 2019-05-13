@@ -1,14 +1,13 @@
 <template>
 	<div>
 		<theHeader />
-		<!-- <SearchBox /> -->
 		<Home />
 	</div>
 </template>
 <script>
 import theHeader from "./theHeader";
 import Home from "./Home";
-// import SearchBox from "@SearchBox";
+import SearchBox from "@SearchBox";
 
 export default {
 	name: "hdsTheme",
@@ -18,8 +17,8 @@ export default {
 	},
 	components: {
 		theHeader,
-		Home
-		// SearchBox
+		Home,
+		SearchBox
 	},
 	created() {},
 	computed: {}

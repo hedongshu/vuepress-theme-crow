@@ -4,6 +4,7 @@ module.exports = {
     name: 'vuepress-theme-hds',
     plugins: [
         '@vuepress/blog',
+        '@vuepress/pagination',
         [
             '@vuepress/search', {
                 searchMaxSuggestions: 10
@@ -11,7 +12,7 @@ module.exports = {
         [
             '@vuepress/register-components', {
                 componentsDir: [
-                    path.resolve(__dirname, 'components')
+                    path.resolve(__dirname, './components')
                 ]
             }]
     ]

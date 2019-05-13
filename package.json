@@ -8,10 +8,15 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "vuepress dev docs",
-        "build": "vuepress build docs"
+        "dev": "vuepress dev docs --temp docs/.temp",
+        "build": "vuepress build docs --temp docs/.temp"
     },
     "author": "",
     "license": "ISC",
-    "devDependencies": {}
+    "devDependencies": {
+        "@vuepress/plugin-blog": "^1.0.0-alpha.47",
+        "@vuepress/plugin-pagination": "^1.0.0-alpha.47",
+        "@vuepress/plugin-search": "^1.0.0-alpha.47",
+        "vuepress": "^1.0.0-alpha.47"
+    }
 }
