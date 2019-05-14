@@ -1,25 +1,26 @@
 <template>
 	<div>
-		<div class="page-header">
+		<div class="post-header">
 			<h2>{{ $page.title }}</h2>
 			<div class="updateInfo">
 				<icon-font
 				 class="infoIcon"
 				 icon-class="shijian"
 				/>
-				<!-- <span>{{ $page.lastUpdated }}</span> -->
-				<span>2017-05-08</span>
+				<span>{{ $page.lastUpdated }}</span>
 			</div>
 		</div>
-		<div class="page-body">
+		<div class="post-body">
 			<Content />
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	name: "Post"
+};
 </script>
-<style lang="stylus" src="../styles/page.styl">
+<style scoped lang="stylus" src="../styles/post.styl">
 </style>
 

@@ -2,7 +2,6 @@ const path = require('path')
 
 module.exports = {
     name: 'vuepress-theme-hds',
-    // globalLayout: path.resolve(''),
     plugins: [
         '@vuepress/pagination',
         '@vuepress/blog',
@@ -30,7 +29,7 @@ module.exports = {
             }
         ]
 
-    ]
+    ],
 }
 
 
