@@ -3,8 +3,10 @@ const path = require('path')
 module.exports = {
     name: 'vuepress-theme-hds',
     plugins: [
+        '@vuepress/back-to-top',
         '@vuepress/pagination',
         '@vuepress/blog',
+        ['@vuepress/active-header-links'],
         [
             '@vuepress/search', {
                 searchMaxSuggestions: 10

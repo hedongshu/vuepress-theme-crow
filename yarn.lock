@@ -784,6 +784,18 @@
   dependencies:
     lodash.throttle "^4.1.1"
 
+"@vuepress/plugin-active-header-links@^1.0.0-alpha.48":
+  version "1.0.0-alpha.48"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.48.tgz#f30772d4a83f12ade91019a62ac5ce3864f19d2c"
+  dependencies:
+    lodash.throttle "^4.1.1"
+
+"@vuepress/plugin-back-to-top@^1.0.0-alpha.48":
+  version "1.0.0-alpha.48"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.0.0-alpha.48.tgz#27ce281cd2ad3eafb1fe820156ae483af731c509"
+  dependencies:
+    lodash.debounce "^4.0.8"
+
 "@vuepress/plugin-blog@^1.0.0-alpha.47":
   version "1.0.0-alpha.47"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.0.0-alpha.47.tgz#d453e79c1cd945ac9e4549984d9f0813219a8c1e"
@@ -3807,6 +3819,10 @@ lodash.camelcase@^4.3.0:
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
 lodash.kebabcase@^4.1.1:
   version "4.1.1"
