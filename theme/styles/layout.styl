@@ -102,12 +102,13 @@ hr {
 
 
 
-.sideBar {
+.side-wrap {
 	position: fixed;
 	right: 0;
 	top: 0;
 	bottom: 0;
 	flex-grow: 0;
+    transition: all 0.5s
 }
 .sideOpened {
 	width: 320px !important;
@@ -120,3 +121,71 @@ hr {
 	right: 10px;
 	bottom: 20%;
 }
+
+
+/** 按钮 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+.sidebar-toggle {
+    transition: all 0.5s
+    font-size: 35px
+	position: fixed
+    bottom: 5rem
+    width: 2.5rem
+    height: 2.5rem
+    right : 32px
+	padding: 5px
+	line-height: 0
+	z-index: 1050
+	cursor: pointer
+}
+    
+.sidebar-toggle svg 
+    position: absolute
+
+.sidebar-toggle-open 
+    right: 32+300px
+    transform: scaleX(-1)
+
+@keyframes hoverAnimation {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    top: 6px
+  }
+
+  40%,
+  43% {
+        top: -13px
+
+  }
+
+  70% {
+        top: -7px
+
+  }
+
+  90% {
+    top: -3px
+    
+  }
+}
+
+.sidebar-toggle-hover
+    animation: hoverAnimation 1s
+
+.global-ui>.go-to-top
+    transition: all 0.5s
+.sideOpenedContainer + .global-ui>.go-to-top
+    right 21.5rem

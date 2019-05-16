@@ -14,39 +14,65 @@
 
 		</div>
 
-		<!-- 侧边栏 -->
-		<transition name="slide">
-			<sideBar v-show="sideOpened" />
-		</transition>
+		<div class="side-wrap">
+			<!-- 侧边栏 -->
+			<transition name="slide">
+				<sideBar
+				 v-show="sideOpened"
+				 :sideOpened="sideOpened"
+				/>
+			</transition>
 
-		<a
-		 href="###"
-		 @click="sideOpened = !sideOpened"
-		 class="toggleButton"
-		>{{ sideOpened ? '关闭' : '展开'}}</a>
+			<!-- 侧栏开关 -->
+			<div
+			 class="sidebar-toggle"
+			 @click="sideOpened = !sideOpened"
+			 @mouseenter="toggleHover = true"
+			 @mouseleave="toggleHover = false"
+			 :class="animationHoveClass"
+			>
+				<icon-font
+				 :class="{'sidebar-toggle-hover': this.toggleHover}"
+				 icon-class='shangchuan'
+				></icon-font>
+
+			</div>
+		</div>
 	</div>
 </template>
-<script>
+<script >
 import theHeader from "./theHeader";
 import SearchBox from "@SearchBox";
 import Home from "./Home";
 import Post from "./Post";
 import NotFound from "./NotFound";
+import Categories from "./Categories";
+import Category from "./Category";
+import Tag from "./Tag";
+import Tags from "./Tags";
 
 export default {
 	name: "hdsTheme",
 
 	data() {
 		return {
-			sideOpened: false
+			sideOpened: false,
+			toggleHover: false
 		};
+	},
+	methods: {
+		toggleEventHander(e) {}
 	},
 	components: {
 		theHeader,
 		Home,
 		SearchBox,
 		Post,
-		NotFound
+		NotFound,
+		Tag,
+		Tags,
+		Categories,
+		Category
 	},
 	computed: {
 		layout() {
@@ -55,6 +81,11 @@ export default {
 				return this.$frontmatter.layout;
 			}
 			return "NotFound";
+		},
+		animationHoveClass() {
+			return {
+				"sidebar-toggle-open": this.sideOpened
+			};
 		}
 	},
 	methods: {
@@ -75,15 +106,14 @@ export default {
 /* 可以设置不同的进入和离开动画 */
 /* 设置持续时间和动画函数 */
 .slide-enter-active {
-	transition: all 0.3s ease-in;
+	transition: all 0.2s ease-in;
 }
 .slide-leave-active {
-	transition: all 0.5s ease-out;
+	transition: all 0.6s ease-out;
 }
 .slide-enter,
 .slide-leave-to {
 	transform: translateX(100%);
-	opacity: 0;
 }
 </style>
 

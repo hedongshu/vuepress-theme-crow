@@ -2,6 +2,9 @@ const path = require('path')
 
 module.exports = {
     name: 'vuepress-theme-hds',
+    head: [
+        ['script', { src: 'http://at.alicdn.com/t/font_1182506_c9xtn5bx6iq.js' }]
+    ],
     plugins: [
         '@vuepress/back-to-top',
         '@vuepress/pagination',

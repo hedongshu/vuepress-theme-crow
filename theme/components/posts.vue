@@ -19,7 +19,7 @@
 					 class="infoIcon"
 					 icon-class="shijian"
 					/>
-					<span>{{ $page.lastUpdated }}</span>
+					<span>{{ item.lastUpdated }}</span>
 				</div>
 			</header>
 			<div class="post-body">
