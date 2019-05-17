@@ -23,7 +23,11 @@
 				</div>
 			</header>
 			<div class="post-body">
-				<p class="post-excerpt">{{ excerpt }}</p>
+				<p
+				 class="post-excerpt content"
+				 v-html="item.excerpt"
+				>
+				</p>
 
 				<router-link
 				 class="post-btn"
@@ -41,9 +45,10 @@
 export default {
 	props: ["items"],
 	data() {
-		return {
-			excerpt: `简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介`
-		};
+		return {};
+	},
+	created() {
+		console.log(this.items);
 	}
 };
 </script>

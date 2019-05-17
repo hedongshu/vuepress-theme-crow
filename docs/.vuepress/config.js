@@ -6,7 +6,7 @@ module.exports = {
     description: 'hds的博客',
     theme: require.resolve('../../theme'),
     head: [
-        ['script', { src: 'http://at.alicdn.com/t/font_1182506_3lea0gbd86a.js' }]
+        ['script', { src: 'https://at.alicdn.com/t/font_1182506_3lea0gbd86a.js' }]
     ],
     themeConfig: {
         nav: [

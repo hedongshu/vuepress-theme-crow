@@ -7,9 +7,11 @@
         "doc": "docs"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "vuepress dev docs --temp docs/.temp",
-        "build": "vuepress build docs --temp docs/.temp"
+        "release": "release-it",
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs",
+        "devt": "vuepress dev docs --temp example/.temp",
+        "buildt": "vuepress build docs --temp example/.temp"
     },
     "author": "",
     "license": "ISC",
