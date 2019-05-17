@@ -6,7 +6,7 @@
 			 :key="index"
 			>
 				<router-link :to='item.link'>
-					<icon-font icon-class="geren" />{{ item.text }}
+					<icon-font :icon-class="item.icon" />{{ item.text }}
 				</router-link>
 			</li>
 
@@ -34,7 +34,7 @@ export default {
 		list-style: none;
 
 		li {
-			margin: 0 5px;
+			margin-left: 5px;
 			float: left;
 
 			a {

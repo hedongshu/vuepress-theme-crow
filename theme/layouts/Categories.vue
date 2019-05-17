@@ -1,18 +1,17 @@
 <template>
-	<div>
-		<h2>分类 / categories</h2>
-		<p v-if="Object.keys($categories._metaMap).length == 0">
-			暂时没有标签
-		</p>
-		<div
-		 v-for="(value, name) in $categories._metaMap"
-		 :key="name"
-		>
-			<theItem
-			 :ivalue='value'
-			 :ikey="name"
-			/>
-		</div>
+	<div class="categories">
+		<p>当前共有{{Object.keys($categories._metaMap).length}}个分类</p>
+		<ul>
+			<li
+			 v-for="(value, name) in $categories._metaMap"
+			 :key="name"
+			>
+				<theItem
+				 :ivalue='value'
+				 :ikey="name"
+				/>
+			</li>
+		</ul>
 
 	</div>
 </template>
@@ -22,3 +21,14 @@ export default {
 	name: "Categories"
 };
 </script>
+
+<style lang="stylus">
+.categories>p {
+	text-align: center;
+	font-size: 18px;
+}
+
+.categories ul {
+	margin: 20px auto;
+}
+</style>

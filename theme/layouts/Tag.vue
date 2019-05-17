@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<h2>当前标签: "{{currentName}}" , 共有{{$tag.posts.length}}篇文章</h2>
+	<div class="tag">
+		<p>{{$tag.posts.length}} 篇文章包含「{{currentName}}」 标签</p>
 		<posts :items='$tag.posts' />
 	</div>
 </template>
@@ -15,3 +15,10 @@ export default {
 	}
 };
 </script>
+
+<style lang="stylus" scoped>
+.tag>p {
+	text-align: center;
+	font-size: 18px;
+}
+</style>

@@ -1,19 +1,19 @@
 
 <template>
-	<div>
-		<h2>标签 / Tags</h2>
-		<p v-if="Object.keys($tags._metaMap).length == 0">
-			暂时没有标签
-		</p>
-		<div
-		 v-for="(value, name) in $tags._metaMap"
-		 :key="name"
-		>
-			<theItem
-			 :ivalue='value'
-			 :ikey="name"
-			/>
-		</div>
+	<div class="tags">
+		<p>当前共有{{Object.keys($tags._metaMap).length}}个标签</p>
+		<ul>
+			<li
+			 v-for="(value, name) in $tags._metaMap"
+			 :key="name"
+			>
+				<theItem
+				 :ivalue='value'
+				 :ikey="name"
+				/>
+			</li>
+		</ul>
+
 	</div>
 </template>
 
@@ -22,3 +22,15 @@ export default {
 	name: "Tags"
 };
 </script>
+
+<style lang="stylus">
+
+.tags p {
+	text-align: center;
+	font-size: 18px;
+}
+
+.tags ul {
+	margin: 20px auto;
+}
+</style>

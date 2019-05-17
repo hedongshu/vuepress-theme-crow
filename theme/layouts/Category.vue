@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<h2>当前分类: "{{currentName}}" , 共有{{$category.posts.length}}篇文章</h2>
+	<div class="category">
+		<p> {{$category.posts.length}} 篇文章属于 「{{currentName}}」 分类</p>
 		<posts :items='$category.posts' />
 	</div>
 </template>
@@ -15,3 +15,11 @@ export default {
 	}
 };
 </script>
+
+<style lang="stylus">
+.category>p {
+	text-align: center;
+	font-size: 18px;
+}
+</style>
+

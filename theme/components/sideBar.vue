@@ -8,8 +8,11 @@
 				<section>
 					<!-- 头像,骚话 -->
 					<div class="info-box">
-						<div></div>
-						<span>嘻嘻嘻嘻</span>
+						<img
+						 class="picture"
+						 :src="$withBase(getImg.path)"
+						>
+						<span>{{getImg.text}}</span>
 					</div>
 					<!-- 导航 -->
 					<nav class="nav-box">
@@ -40,9 +43,18 @@
 					<!-- 社交 -->
 					<div class="social-box">
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li
+							 v-for="(item, index) in $themeConfig.sideInfo.social"
+							 :key="index"
+							>
+
+								<a
+								 :href="item.link"
+								 target="_blank"
+								>
+									<iconFont :icon-class='item.icon' />{{ item.name }}</a>
+
+							</li>
 						</ul>
 					</div>
 				</section>
@@ -59,8 +71,14 @@ export default {
 	data() {
 		return {};
 	},
-	created() {
-		console.log(this.$categories.length);
+	computed: {
+		getImg() {
+			const info = this.$themeConfig.sideInfo;
+			return {
+				path: info.picturePath,
+				text: info.infoText || this.$title
+			};
+		}
 	}
 };
 </script>
@@ -68,6 +86,13 @@ export default {
 <style lang="stylus" src='../styles/sideBar.styl'>
 </style>
 
-<style>
+<style lang="css" scoped>
+.social-box .icon {
+	margin: 0 3px;
+}
+.social-box a:hover {
+	color: #909090;
+}
 </style>
+
 

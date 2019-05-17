@@ -50,6 +50,7 @@ import Categories from "./Categories";
 import Category from "./Category";
 import Tag from "./Tag";
 import Tags from "./Tags";
+import Page from "./Page";
 
 export default {
 	name: "hdsTheme",
@@ -72,7 +73,8 @@ export default {
 		Tag,
 		Tags,
 		Categories,
-		Category
+		Category,
+		Page
 	},
 	computed: {
 		layout() {
