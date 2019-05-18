@@ -19,7 +19,15 @@
 					 class="infoIcon"
 					 icon-class="shijian"
 					/>
-					<span>{{ item.lastUpdated }}</span>
+					<span>创建日期: {{ getCreateDate(item.frontmatter.date) }}</span>
+
+					<span v-if="item.lastUpdated">
+						<icon-font
+						 class="infoIcon"
+						 icon-class="shijian"
+						/>
+						<span>最近更新: {{ item.lastUpdated }}</span>
+					</span>
 				</div>
 			</header>
 			<div class="post-body">
@@ -42,13 +50,18 @@
 </template>
 
 <script>
+const moment = require("moment");
+
 export default {
 	props: ["items"],
 	data() {
 		return {};
 	},
-	created() {
-		console.log(this.items);
+	methods: {
+		getCreateDate(timestamp) {
+			console.log(timestamp);
+			return moment(timestamp).format("YYYY-M-D");
+		}
 	}
 };
 </script>

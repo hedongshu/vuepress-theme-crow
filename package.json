@@ -11,7 +11,9 @@
         "dev": "vuepress dev docs",
         "build": "vuepress build docs",
         "devt": "vuepress dev docs --temp example/.temp",
-        "buildt": "vuepress build docs --temp example/.temp"
+        "buildt": "vuepress build docs --temp example/.temp",
+        "deploy": "./deploy",
+        "new": "./new"
     },
     "author": "",
     "license": "ISC",

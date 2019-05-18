@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+
+
+// 获取新建的名字
+let postName = process.argv[2]
+
+const fs = require('fs');
+const path = require('path')
+
+const postDir = path.resolve(__dirname, './docs/_posts')
+
+let date = new Date().valueOf()
+
+
+let text = `---
+title: ${postName}
+date: ${date}
+
+---`
+
+
+
+fs.readdir(postDir, function (error, data) {
+    if (error) {
+        console.log(error);
+        return false;
+    }
+
+    const posts = data
+    if (posts.indexOf(postName + '.md') != -1) {
+        console.log(`${postName} 文件已经存在!`)
+        return
+    }
+
+    // console.log('文章数据', text)
+
+    createNew(postName, text)
+})
+
+
+function createNew(name, value) {
+
+    let writerStream = fs.createWriteStream(path.resolve(postDir, `./${name}.md`))
+
+    writerStream.write(value, 'utf-8')
+
+    writerStream.end()
+
+    writerStream.on('finish', function () {
+        console.log(`${name}.md  ---- 创建成功`)
+    });
+
+    writerStream.on('error', function (err) {
+        console.log(err.stack);
+    });
+}
+

@@ -1,9 +1,8 @@
 ---
 title: Hello Word!
+date: 1558201763286
 
 ---
-
-hello word!
 
 wellocome to vuepress-theme-carw
 
@@ -15,25 +14,31 @@ I like it very much，so I copied it.
 ## start
 
 ```shell
+git clone git@github.com:hedongshu/vuepress-theme-carw.git
+
 yarn
 
 npm run dev
 ```
 
+## add new post
+```
+npm run new -- <name>
+```
 
-
+## deploy
 If you want  deploying to GitHub Pages,  Just edit `deploy.sh` 
 
 then
 
 ```shell
-./deploy.sh
+npm run deploy
 ```
 
 if an error `Permission denied` 
 
 ```shell
-chmod 777 deploy.shsh
+chmod 755 deploy.shsh
 ```
 
 <!-- more -->
