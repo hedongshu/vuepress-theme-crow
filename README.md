@@ -21,6 +21,7 @@ npm run dev
 ```
 npm run new -- <name>
 ```
+You can see the new post in the `docs`>`_opsts`
 
 ## deploy
 If you want  deploying to GitHub Pages,  Just edit `deploy.sh` 
