@@ -5,7 +5,7 @@ wellocome to vuepress-theme-carw
 this theme referenced [hexo-theme-next](https://github.com/theme-next/hexo-theme-next)  
 I like it very much，so I copied it.
 
-see the [demo](https://hedongshu.github.io/)
+see the [demo](https://hedongshu.github.io/2019/05/19/helloword/)
 
 ## start
 
