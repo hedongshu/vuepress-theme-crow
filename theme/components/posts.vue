@@ -21,7 +21,7 @@
 					/>
 					<span>创建日期: {{ getCreateDate(item.frontmatter.date) }}</span>
 
-					<span v-if="item.lastUpdated">
+					<span v-show="item.lastUpdated">
 						<icon-font
 						 class="infoIcon"
 						 icon-class="shijian"
