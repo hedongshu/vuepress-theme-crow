@@ -40,6 +40,10 @@ module.exports = {
                 },
             ]
 
+        },
+
+        footerInfo: {
+            text: '哟哟哟yoyoyoyo'
         }
     }
 }

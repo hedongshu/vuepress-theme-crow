@@ -10,7 +10,7 @@
 				/>
 				<span>创建日期: {{ createDate }}</span>
 
-				<span v-show="$page.lastUpdated">
+				<span v-if="$page.lastUpdated">
 					<icon-font
 					 class="infoIcon"
 					 icon-class="shijian"

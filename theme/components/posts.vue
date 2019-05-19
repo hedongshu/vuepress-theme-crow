@@ -21,7 +21,7 @@
 					/>
 					<span>创建日期: {{ getCreateDate(item.frontmatter.date) }}</span>
 
-					<span v-show="item.lastUpdated">
+					<span v-if="item.lastUpdated">
 						<icon-font
 						 class="infoIcon"
 						 icon-class="shijian"
@@ -33,16 +33,16 @@
 			<div class="post-body">
 				<p
 				 class="post-excerpt content"
-				 v-html="item.excerpt"
+				 v-html="getExcerpt(item.excerpt)"
 				>
-				</p>
 
-				<router-link
-				 class="post-btn"
-				 :to="item.path"
-				>
-					阅读全文 »
-				</router-link>
+					<router-link
+					 class="post-btn"
+					 :to="item.path"
+					>
+						阅读全文 »
+					</router-link>
+				</p>
 			</div>
 
 		</div>
@@ -55,12 +55,17 @@ const moment = require("moment");
 export default {
 	props: ["items"],
 	data() {
-		return {};
+		return {
+			html: ""
+		};
 	},
 	methods: {
 		getCreateDate(timestamp) {
 			console.log(timestamp);
 			return moment(timestamp).format("YYYY-M-D");
+		},
+		getExcerpt(excerpt) {
+			return excerpt == undefined ? "" : excerpt;
 		}
 	}
 };

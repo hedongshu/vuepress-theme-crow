@@ -61,9 +61,7 @@ export default {
 			toggleHover: false
 		};
 	},
-	methods: {
-		toggleEventHander(e) {}
-	},
+	methods: {},
 	components: {
 		theHeader,
 		Home,

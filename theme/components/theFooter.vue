@@ -16,7 +16,7 @@ export default {
 	},
 	computed: {
 		footerText() {
-			return "yoyoyoyo";
+			return this.$themeConfig.footerInfo.text;
 		}
 	}
 };
