@@ -26,6 +26,6 @@
         "vuepress": "^1.0.0-alpha.47"
     },
     "dependencies": {
-        "moment": "^2.24.0"
+        "moment": "^2.29.2"
     }
 }
